@@ -1,0 +1,154 @@
+.slides {
+  position: relative;
+  grid-column: 1 / -1;
+  overflow: hidden;
+  border-radius: 30px;
+  object-fit: cover;
+  object-position: center;
+  max-width: 1167px;
+  max-height: 680px;
+
+  @include on-small-desktop {
+    grid-column: 7 / 13;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
+    margin: 0;
+  }
+
+  &__fade {
+    height: 390px;
+
+    @include on-small-desktop {
+      height: 100%;
+    }
+
+    &__img {
+      display: block;
+      max-width: 100%;
+      object-fit: cover;
+      transition: all 0.3s ease-in-out;
+
+      &--gadget {
+        opacity: 0;
+      }
+
+      &--mac {
+        opacity: 0;
+      }
+
+      &--hand {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.intro {
+  position: absolute;
+  top: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  box-sizing: border-box;
+  padding-inline: 32px;
+
+  @include on-small-desktop {
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    justify-content: start;
+    top: 68%;
+    gap: 24px;
+    padding-inline: 78px;
+  }
+
+  &__arrows {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    margin-bottom: 8px;
+
+    &--arrow {
+      border: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 32px;
+      height: 32px;
+      cursor: pointer;
+      background-color: #fff;
+      border-radius: 50%;
+
+      &:hover {
+        background-color: $button-color;
+        color: $header-footer-text-color;
+      }
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    box-sizing: border-box;
+    color: $header-footer-text-color;
+
+    &--title {
+      font-family: 'Poppins', sans-serif;
+      text-align: left;
+      line-height: 20px;
+      letter-spacing: 3px;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+    }
+
+    &--text {
+      font-family: 'Open Sans', sans-serif;
+      text-align: left;
+      line-height: 20px;
+      letter-spacing: 3px;
+      font-size: 14px;
+      font-weight: 400;
+      margin-bottom: 8px;
+    }
+
+    &__circles {
+      margin: 2px 0;
+      gap: 8px;
+    }
+  }
+}
+
+.prev, .next {
+  padding: 16px;
+  color: $main-text-color;
+  font-weight: bold;
+  transition: 0.6s ease;
+  user-select: none;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+
+  &:hover, .active {
+    background-color: #717171;
+  }
+}
+
+/*.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .3}
+  to {opacity: 1}
+}*/

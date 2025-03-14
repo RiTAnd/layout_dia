@@ -1,0 +1,23 @@
+.header {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  background-color: $header-footer-bg-color;
+  border-radius: 0 0 30px 30px;
+  width: 100%;
+  height: 100vh;
+
+  &__content {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 28px;
+
+    @include on-small-desktop {
+      @include page-grid;
+
+      margin-top: 0;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+.people {
+  padding-top: 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 24px;
+
+  @include on-small-desktop {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
