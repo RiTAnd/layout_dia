@@ -75,3 +75,13 @@
     gap: 30px;
   }
 }
+
+@mixin animate {
+  animation: animate 1.5s ease-in-out;
+}
+
+@mixin keyframes {
+  @keyframes #{animate} {
+    @content;
+  }
+}

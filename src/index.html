@@ -58,45 +58,40 @@
       </div>
 
       <div class="header__content">
-        <div class="home">
-          <h1 class="home__title">Strategic Agency</h1>
-          <p class="home__text">
+        <div class="header__main">
+          <h1 class="header__title">Strategic Agency</h1>
+          <p class="header__text">
             We believe in the power of bold ideas that can solve business challenges.
           </p>
-          <a href="#about-us" class="button home__button">
-            Learn more
+          <a href="#about-us" class="button header__button">
+            <span>Learn more</span>
           </a>
         </div>
 
         <div class="slides">
           <div class="slides__fade">
             <img src="images/slider/slide-img-1.jpg" alt="hand with watch"
-              class="slides__fade__img slides__fade__img--hand">
+              class="slides__image slides__image--active">
             <img src="images/slider/slide-img-2.jpg" alt="gadgets"
-              class="slides__fade__img slides__fade__img--gadget">
+              class="slides__image slides__image--gadget">
             <img src="images/slider/slide-img-3.jpg" alt="macbook and flower"
-              class="slides__fade__img slides__fade__img--mac">
+              class="slides__image slides__image--mac">
           </div>
-
-          <div class="intro">
-            <div class="intro__arrows">
-              <div class="intro__arrows intro__arrows--arrow">
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-              </div>
-              <div class="intro__arrows intro__arrows--arrow">
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
-              </div>
+          <div class="slides__intro">
+            <div class="slides__arrows">
+              <a class="slides__arrow slides__arrow--left" id="prev">&#10094;</a>
+              <a class="slides__arrow slides__arrow--right" id="next">&#10095;</a>
             </div>
 
-            <div class="intro__info">
-              <h3 class="intro__info--title">Intro</h3>
-              <p class="intro__info--text">
+            <div class="slides__info">
+              <h3 class="slides__title">Intro</h3>
+              <p class="slides__text">
                 By the same illusion which lifts the <br> horizon.
               </p>
-              <div class="intro__circles">
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>
+              <div class="slides__circles">
+                <span class="slides__dot" onclick="currentSlide(1)"></span>
+                <span class="slides__dot" onclick="currentSlide(2)"></span>
+                <span class="slides__dot" onclick="currentSlide(3)"></span>
               </div>
             </div>
           </div>
@@ -105,8 +100,8 @@
     </header>
 
     <main class="main">
-      <section class="who-we-are" id="about-us">
-        <div class="about-us">
+      <section class="about-us" id="about-us">
+        <div class="about-us__container">
           <h2 class="about-us__title">
             Who we are
           </h2>
@@ -260,12 +255,11 @@
         </div>
       </section>
 
-      <section class="what-people-say" id="testimonials">
-        <div class="testimonials">
-          <h3 class="testimonials__title--small">Testimonials</h3>
-          <h2 class="title testimonials__title">What people say</h2>
-          <div class="people testimonials__people">
-
+      <section class="testimonials" id="testimonials">
+        <div class="testimonials__container">
+          <h3 class="testimonials__title testimonials__title--small">Testimonials</h3>
+          <h2 class="testimonials__title">What people say</h2>
+          <div class="testimonials__people">
             <div class="person">
               <div class="person__image">
                 <img src="./images/testimonials/testimonial-ava-1.jpg" alt="testimonial-ava-1"
@@ -273,13 +267,13 @@
               </div>
               <div class="person__quote"></div>
               <div class="person__description">
-                <p class="paragraph person__paragraph">
+                <p class="person__paragraph">
                   AIR's ideas are refreshing and out of the box.
                   Authentic team that focuses on the important path of the brand.
                 </p>
+                <p class="person__name">Tal Gilad</p>
+                <h2 class="person__specializations">Teach for America</h2>
               </div>
-              <div class="person__name">Tal Gilad</div>
-              <div class="person__specializations">Teach for America</div>
             </div>
 
             <div class="person">
@@ -289,13 +283,13 @@
               </div>
               <div class="person__quote"></div>
               <div class="person__description">
-                <p class="paragraph person__paragraph">
+                <p class="person__paragraph">
                   AIR is an exceptional agency that leads with creative talent,
                   first-class account servicing.
                 </p>
+                <p class="person__name">Azadeh Hawkins</p>
+                <h2 class="person__specializations">Hawkins consulting</h2>
               </div>
-              <div class="person__name">Azadeh Hawkins</div>
-              <div class="person__specializations">Hawkins consulting</div>
             </div>
 
             <div class="person">
@@ -305,13 +299,13 @@
               </div>
               <div class="person__quote"></div>
               <div class="person__description">
-                <p class="paragraph person__paragraph">
+                <p class="person__paragraph">
                   AIR raises the agency bar to stratospheric heights on both
                   creative output and client service.
                 </p>
+                <p class="person__name">Michel Grover</p>
+                <h2 class="person__specializations">Hulu</h2>
               </div>
-              <div class="person__name">Michel Grover</div>
-              <div class="person__specializations">Hulu</div>
             </div>
           </div>
         </div>
@@ -325,7 +319,7 @@
             only if all three components are united.
           </p>
           <a href="#message" class="button vision__button">
-            Apply
+            <span>Apply</span>
           </a>
         </div>
       </section>

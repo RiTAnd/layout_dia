@@ -1,4 +1,5 @@
 'use strict';
+
 let slideIndex = 1;
 showSlides(slideIndex);
 
@@ -9,11 +10,10 @@ function plusSlides(n) {
 function currentSlide(n) {
   showSlides(slideIndex = n);
 }
-
 function showSlides(n) {
   let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
+  let slides = document.getElementsByClassName("slides__image");
+  let dots = document.getElementsByClassName("slides__dot");
   if (n > slides.length) {slideIndex = 1}
   if (n < 1) {slideIndex = slides.length}
   for (i = 0; i < slides.length; i++) {
